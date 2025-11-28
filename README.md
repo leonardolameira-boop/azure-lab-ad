@@ -155,7 +155,7 @@ Automatically creates a full OU structure per department.
 
 **Generated structure:**
 
-```
+```text
 OU=DEPARTMENTS,OU=DUNNES,DC=DUNNES,DC=LOCAL
     OU=FINANCE
         OU=USERS
@@ -173,7 +173,7 @@ OU=DEPARTMENTS,OU=DUNNES,DC=DUNNES,DC=LOCAL
 
 **Security groups created automatically:**
 
-```
+```text
 <DEPT>_READ
 <DEPT>_RW
 ```
@@ -208,7 +208,7 @@ Creates departmental file share folders and applies NTFS permissions based on se
 
 **Folder structure created:**
 
-```
+```text
 C:\Shares
     FINANCE
     MARKETING
@@ -217,7 +217,7 @@ C:\Shares
 
 **NTFS permissions applied:**
 
-```
+```text
 <DEPT>_READ → Read / List
 <DEPT>_RW  → Modify / Write
 ```
@@ -246,3 +246,39 @@ HR_READ            HR_RW
 This repository is intended for learning, lab simulations, and interview demonstrations.  
 These scripts help model real enterprise workflows involving AD DS automation and permissions management.
 
+# 📁 SharePoint Placement (Optional)
+
+In a real documentation workflow, this content can be stored inside a SharePoint structure such as:
+
+**Site:** Home Lab – AD Automation  
+**Sections:**  
+- Documentation (README)  
+- PowerShell Scripts  
+- Sample CSV Files  
+- OU & Group Structure Diagrams  
+- Troubleshooting Notes  
+
+This mirrors how enterprise IT teams store internal automation and AD DS documentation.
+
+---
+
+# 🎯 How This Is Used in My Lab
+
+This automation is part of a complete **Active Directory + Security Home Lab**, where I practice:
+
+- Designing enterprise-like OU and group structures  
+- Automating user onboarding with PowerShell and CSV  
+- Building repeatable templates for departments and shares  
+- Applying NTFS permissions using least privilege principles  
+- Documenting infrastructure professionally (GitHub + SharePoint)  
+- Preparing for IT Support / SysAdmin / SOC interviews  
+
+This project demonstrates real-world IT administration workflows and showcases scripting, documentation, and AD DS skills.
+
+---
+
+# 👤 Author
+
+**Leonardo Lameira**  
+Active Directory • Azure • Security Lab Documentation  
+Dublin, Ireland  
