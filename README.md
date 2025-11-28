@@ -54,7 +54,7 @@ Creates department folders and applies NTFS permissions.
 ┌────────────────────────────┐                                     ┌────────────────────────────┐
 │ Subnet-DC (10.0.1.0/24)    │                                     │ Subnet-Clients (10.0.2.0/24)│
 │                            │                                     │                            │
-│  • DC1 (10.0.1.4)          │                                     │  • Client01 (10.0.2.4)      │
+│  • DC1 (10.0.1.4)          │                                     │  • Client01 (10.0.1.5)      │
 │    Windows Server 2022     │                                     │    Windows 10/11            │
 │    AD DS / DNS             │                                     │    Domain-joined           │
 └────────────────────────────┘                                     └────────────────────────────┘
@@ -65,7 +65,7 @@ Creates department folders and applies NTFS permissions.
                                                               ┌────────────────────────────┐
                                                               │ Subnet-SOC (10.0.3.0/24)   │
                                                               │                            │
-                                                              │  • SOC-SRV01 (10.0.3.4)     │
+                                                              │  • SOC-SRV01 (10.0.1.6)     │
                                                               │    Ubuntu Server            │
                                                               │    Nmap / Wireshark /       │
                                                               │    tcpdump / security tools │
