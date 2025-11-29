@@ -1,0 +1,27 @@
+# GPO Not Applying – Troubleshooting
+
+## Issue
+A GPO for drive mapping was not applying on CLIENT01.
+
+## Symptoms
+- `gpresult /r` did not show the GPO under "Applied GPOs".
+- User had correct OU membership.
+- DNS resolution working.
+
+## Root Cause
+The GPO was linked to the wrong OU (`OU=USERS` instead of `OU=SALES`).
+
+## Fix
+1. Moved user to correct OU:
+   `CN=Anderson.user5,OU=SALES,OU=DEPARTMENTS,OU=DUNNES,DC=DUNNES,DC=LOCAL`
+2. Ran:
+gpupdate /force
+  
+3. Confirmed with:
+gpresult /r
+
+
+## Result
+GPO applied successfully.
+Drive `F:` available in File Explorer.
+
