@@ -1,0 +1,24 @@
+# Ticket 001 – Drive F: Not Showing for User
+
+**Department:** Sales  
+**User:** anderson.user5  
+**Priority:** Medium  
+
+## Description
+User reports missing network drive F: on login.
+
+## Steps Taken
+1. Verified OU membership.
+2. Verified GPO link in `OU=SALES`.
+3. Checked SYSVOL folder for script issues.
+4. Ran:
+gpresult /r
+gpupdate /force
+
+5. Confirmed drive mapped after login.
+
+## Resolution
+Corrected OU membership and reapplied GPO.
+
+## Status
+Closed.
