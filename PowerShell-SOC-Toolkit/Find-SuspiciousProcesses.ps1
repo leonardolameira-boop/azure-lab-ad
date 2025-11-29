@@ -3,7 +3,7 @@
 Finds potentially suspicious processes based on simple heuristics.
 
 .DESCRIPTION
-This script uses ( `Get-Process` ) to highlight processes that may deserve
+This script uses **Get-Process** to highlight processes that may deserve
 further investigation:
 - High CPU time
 - High memory usage
