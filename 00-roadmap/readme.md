@@ -5,14 +5,14 @@ It includes learning priorities, milestones, certifications, and the labs I plan
 
 ---
 
-## 🎯 Long-Term Goal
+##  Long-Term Goal
 Become a SOC Analyst (Tier 1 → Tier 2) with strong foundations in networking, Windows/Linux administration, Active Directory, scripting, and Blue Team operations.
 
 ---
 
-## 📌 Learning Order (Current Roadmap)
+##  Learning Order 
 
-### **1. Security Fundamentals (Now)**
+### **1. Security Fundamentals**
 - CIA Triad  
 - IAAA  
 - Least Privilege  
@@ -91,26 +91,10 @@ All labs are stored in **10-personal-labs/**:
 - Wireshark Lab  
 - SIEM Lab  
 
----
-
-## 🧭 Progress Tracker
-
-| Topic | Status |
-|-------|--------|
-| Security Fundamentals | 🔵 In progress |
-| Networking Basics | ⬜ Not started |
-| Linux Basics | ⬜ Not started |
-| Windows & PowerShell | ⬜ Not started |
-| Active Directory | 🔵 In progress |
-| Malware & Attacks | ⬜ Not started |
-| Tools (Nmap/Wireshark) | ⬜ Not started |
-| SIEM & Blue Team | ⬜ Not started |
-| Python for Cybersecurity | ⬜ Not started |
-| Personal Labs | 🔵 In progress |
 
 ---
 
-## 🎫 Certification Notes (Optional)
+##  Certification Notes 
 These are the first certifications I plan to complete:
 - **AZ-900** — cloud fundamentals  
 - **CompTIA Security+** — security foundations  
@@ -119,14 +103,13 @@ These are the first certifications I plan to complete:
 ---
 
 ## 📂 How This Roadmap Works
-- I update this file as I progress.  
 - Each major topic has its own folder in the repository.  
 - Labs reinforce the theory learned in each topic.  
 - This roadmap also prepares me for interview discussions.
 
 ---
 
-## 🧩 Why I Document My Roadmap
+##  Why I Document My Roadmap
 - Helps me stay consistent  
 - Reinforces my learning  
 - Shows hiring managers my progression  
