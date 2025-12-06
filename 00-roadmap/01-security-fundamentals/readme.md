@@ -8,7 +8,7 @@ So this folder serves as my “foundation layer” before diving into the more a
 
 ---
 
-## 📌 What you will find here
+##  What you will find here
 
 Each `.md` file is a short, personal explanation that helps me understand and remember the concept:
 
@@ -38,7 +38,7 @@ Each `.md` file is a short, personal explanation that helps me understand and re
 
 ---
 
-## 🧠 Why this folder exists
+##  Why this folder exists
 
 I created this folder because I noticed that I was constantly revisiting these concepts while studying:
 
@@ -58,7 +58,7 @@ This folder helps me:
 
 ---
 
-## 🔄 How I use it
+## � How I use it
 
 - Before interviews → quick review of each file  
 - While building labs → checking concepts like Least Privilege, Zero Trust, CIA  
@@ -67,7 +67,7 @@ This folder helps me:
 
 ---
 
-## 🚧 Work in progress
+##  Work in progress
 
 I’ll keep refining these notes and adding new ones as I learn more.  
 The idea is not to have “perfect textbook definitions”, but explanations that *I* understand and can confidently talk about.
