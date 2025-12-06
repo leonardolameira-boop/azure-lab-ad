@@ -1,208 +1,179 @@
-# Risks (Risk Management & Risk Assessment)
+# Zero Trust
 
 > **Short idea:**  
-> Risk Management is the **overall process** of identifying, analyzing, prioritizing, and treating risks.  
-> Risk Assessment is the **step inside Risk Management** where we evaluate threats, vulnerabilities, likelihood, and impact.
+> **Zero Trust = Never trust, always verify.**  
+> No device, user, network, or application is trusted by default — even if already inside the organization.
 
 ---
 
-## 1. What Is a Risk in Cybersecurity?
+## 1. What Is Zero Trust?
 
-A **risk** is the possibility of harm or loss when a **threat** exploits a **vulnerability** in an **asset**.
+**Zero Trust** is a modern security model based on the principle that:
 
-Simple representation:
+- No one is trusted automatically  
+- Access must be continuously verified  
+- Every request is treated as if it comes from an untrusted network  
 
-`Risk = Threat × Vulnerability × Impact`
+It replaces the old mindset of *“inside = trusted, outside = untrusted.”*
 
-If one of these factors increases, the overall risk also increases.
-
----
-
-## 2. Risk Management (The Full Process)
-
-**Risk Management** is the ongoing, strategic process of:
-
-1. Identifying risks  
-2. Assessing risks (Risk Assessment)  
-3. Prioritizing risks  
-4. Selecting and applying mitigation controls  
-5. Monitoring and reviewing risks  
-
-Organizations use Risk Management to ensure they are protecting what matters most.
+Zero Trust assumes breaches **will** happen, so systems are designed to reduce impact.
 
 ---
 
-## 3. Risk Assessment (Inside Risk Management)
+## 2. Core Principles of Zero Trust
 
-**Risk Assessment** is the analysis stage of Risk Management.
+### 📌 1. **Verify Explicitly**
+Authenticate and authorize every access request using:
+- MFA  
+- Device health  
+- IP and location checks  
+- User role  
+- Risk level  
 
-It answers:
-
-- Which assets do we have?  
-- What threats target them?  
-- What vulnerabilities exist?  
-- What is the impact if something goes wrong?  
-- How likely is the risk to occur?  
-
-### 3.1 Qualitative Risk Assessment
-
-Uses descriptive levels like:
-
-- High  
-- Medium  
-- Low  
-
-It’s simple, fast, and widely used by SOC and Blue Team analysts.
-
-Example of a qualitative result:
-
-- `Likelihood: High`  
-- `Impact: Medium`  
-- `Risk Level: High`
-
-### 3.2 Quantitative Risk Assessment
-
-Uses numbers and financial values:
-
-- Monetary loss  
-- Probability percentages  
-- Annualized loss expectancy (ALE)  
-
-Example of a quantitative result:
-
-- `Annual Loss Expectancy (ALE) = $25,000`
-
-This approach is more precise, but more complex and data-dependent.
+Nothing is assumed to be safe.
 
 ---
 
-## 4. Core Risk Concepts (Important for Interviews)
+###  2. **Least Privilege Access**
+Give users **only the minimum permissions** required to perform their job.
 
-### Threat  
-Something that can cause harm.  
-Examples: malware, phishing, ransomware, insider threat, fire, human error.
+- Reduces blast radius  
+- Limits damage if accounts are compromised  
 
-### Vulnerability  
-A weakness that a threat can exploit.  
-Examples: misconfigurations, weak passwords, outdated systems, open ports.
-
-### Impact  
-The damage caused if the risk occurs.  
-Examples: financial loss, data breach, downtime, legal penalties, reputation damage.
-
-### Likelihood  
-How probable it is that the threat will exploit the vulnerability.
-
-Risk Assessment combines **likelihood** and **impact** to decide how serious a risk is.
+This often uses:
+- Role-Based Access Control (RBAC)  
+- Permission reviews  
+- Privileged Access Management (PAM)
 
 ---
 
-## 5. Risk Matrix (Common Tool for Prioritization)
+###  3. **Assume Breach**
+Act as if attackers are already in the network.
 
-| Likelihood | Impact | Risk Level |
-|-----------|--------|-----------|
-| High      | High   | Critical  |
-| High      | Medium | High      |
-| Medium    | High   | High      |
-| Medium    | Medium | Medium    |
-| Low       | High   | Medium    |
-| Low       | Low    | Low       |
+This means:
+- Micro-segmentation  
+- Logging and monitoring everywhere  
+- Strong alerts  
+- Restricting internal lateral movement  
+- Encryption in transit & at rest  
 
-This matrix helps teams visualize which risks must be mitigated first.
-
----
-
-## 6. Common Cybersecurity Risks
-
-Some typical risks in real environments:
-
-- Misconfigurations (default settings, open ports, weak permissions)  
-- Weak passwords or no MFA  
-- Excessive privileges (no least privilege)  
-- Outdated operating systems and applications  
-- Missing security patches  
-- Publicly exposed services (RDP, SSH, databases)  
-- Lack of monitoring or logging  
-- Phishing and social engineering  
-- Ransomware and malware infections  
-- Third-party and supply chain risks  
-
-All these risks are evaluated based on **assets**, **threats**, **vulnerabilities**, **impact**, and **likelihood**.
+Zero Trust is about **limiting damage**, not pretending breaches won’t happen.
 
 ---
 
-## 7. How Companies Treat Risks (Risk Responses)
+## 3. Zero Trust Architecture (ZTA)
 
-Organizations usually choose one of four main responses:
+A Zero Trust environment typically includes:
 
-### 7.1 Avoid  
-Eliminate the activity that creates the risk.  
-Example: decommissioning an old, insecure system.
+- Strong identity and access controls  
+- Device compliance checks  
+- Network segmentation  
+- Authentication for every request  
+- Continuous monitoring  
+- Conditional access policies  
+- Encryption and integrity validation  
+- Least privilege applied everywhere  
 
-### 7.2 Mitigate  
-Reduce likelihood or impact using controls.  
-Examples:
-- Patching and updating systems  
-- Applying hardening baselines  
-- Using MFA  
-- Enforcing least privilege  
-- Segmenting the network  
-
-### 7.3 Transfer  
-Move the risk to a third party.  
-Examples:
-- Cyber insurance  
-- Cloud service providers  
-- Outsourcing specific services  
-
-### 7.4 Accept  
-Acknowledge the risk and take no additional action.  
-Used when:
-- Impact is low  
-- Likelihood is low  
-- Cost of mitigation is higher than the potential loss  
+ZTA is a **framework**, not a single tool.
 
 ---
 
-## 8. Example: Risk Assessment for an AD Security Lab
+## 4. Zero Trust vs. Traditional Security Model
 
-Example of simple risk analysis for a small lab:
+| Traditional Model         | Zero Trust Model                    |
+|---------------------------|-------------------------------------|
+| “Trust but verify”        | “Never trust, always verify”         |
+| Trusts internal network   | Internal network is **not trusted** |
+| Strong perimeter firewall | Identity-based controls             |
+| Hard to stop lateral movement | Micro-segmentation prevents spread |
+| Access is granted once    | Access is continuously evaluated    |
 
-| Asset        | Threat             | Vulnerability                      | Impact                       | Risk Level |
-|--------------|--------------------|------------------------------------|------------------------------|-----------|
-| DC1 (AD DS)  | Credential theft   | Weak admin password                | Domain-wide compromise       | Critical  |
-| Client01     | Malware            | User runs unknown executables      | Lateral movement             | High      |
-| File Server  | Unauthorized access| Misconfigured NTFS permissions     | Data exposure                | High      |
-| SIEM Logs    | Log tampering      | No integrity or backup             | Loss of incident visibility  | Medium    |
-
-This shows understanding of how assets, threats, vulnerabilities, and impact work together.
-
----
-
-## 9. How to Explain This in an Interview
-
-### Short version
-
-> “Risk Management is the continuous process of identifying and mitigating risks, and Risk Assessment is the step where we analyze likelihood and impact to prioritize them.”
-
-### Professional version
-
-> “In cybersecurity, risk is the potential for a threat to exploit a vulnerability and harm an asset.  
-> Risk Management is the overall process of identifying, analyzing, prioritizing, and treating these risks.  
-> Inside that process, Risk Assessment focuses on evaluating assets, threats, vulnerabilities, likelihood, and impact.  
-> The result is a prioritized list of risks that helps the organization decide which controls to implement and where to focus its security efforts.”
-
-You can adapt this answer depending on the job role (SOC, Blue Team, governance, cloud, etc.).
+Zero Trust protects against modern threats that bypass perimeter defenses.
 
 ---
 
-## 10. Key Takeaways
+## 5. Why Zero Trust Is Important
 
-- **Risk Management** = strategic, ongoing process.  
-- **Risk Assessment** = analytical step inside Risk Management.  
-- Risks are based on assets, threats, vulnerabilities, impact, and likelihood.  
-- Risk matrices help with prioritization.  
-- Critical assets should receive stronger protection and monitoring.  
-- Understanding risk is essential for SOC, Blue Team, cloud security, and Active Directory environments.
+- Most attacks today come from **stolen credentials** or **internal movement**  
+- Cloud environments don’t have clear perimeters  
+- Users access resources from multiple devices and locations  
+- Hybrid work makes IP-based trust impossible  
+- Ransomware spreads easily in flat networks  
+
+Zero Trust reduces exposure and impact.
+
+---
+
+## 6. Zero Trust in Practice (Examples)
+
+### Example 1 — Logging into a system
+A Zero Trust system checks:
+- Username + password  
+- MFA  
+- Device compliance  
+- IP location  
+- Past behavior (risk score)  
+
+If anything looks suspicious, access is blocked.
+
+---
+
+### Example 2 — Lateral Movement Defense
+An attacker compromises one machine.  
+With Zero Trust:
+- They cannot automatically access internal resources  
+- Micro-segmentation blocks movement  
+- Privileged accounts have no standing access  
+- Alerts are triggered immediately  
+
+---
+
+### Example 3 — File Server Access
+Instead of giving full folder access, Zero Trust requires:
+- Just-in-Time (JIT) access  
+- Role-based privileges  
+- Logging every access  
+- Verification of device security  
+
+---
+
+## 7. Zero Trust and Other Concepts
+
+###  **Least Privilege**
+Zero Trust *requires* least privilege access.  
+They always work together.
+
+###  **PAM (Privileged Access Management)**
+Controls privileged accounts so attackers can’t use admin credentials freely.
+
+###  **JIT Access**
+Admins get permissions **only for a short time** when needed.
+
+###  **Defense in Depth**
+Zero Trust adds layers of protection across identities, endpoints, networks, and applications.
+
+---
+
+## 8. Zero Trust in Interviews (How to Explain It)
+
+### Short version:
+> *“Zero Trust means never trust anything by default. Every request must be authenticated, authorized, and continuously evaluated — regardless of network location.”*
+
+### Full version:
+> “Zero Trust is a security model where no user, device, or network is trusted automatically.  
+> Every access request must be verified using identity, device health, and context.  
+> It applies least privilege and assumes breach, using segmentation, monitoring, and continuous authentication to reduce risk.  
+> It helps stop lateral movement and protects against credential-based attacks.”
+
+---
+
+## 9. Key Takeaways
+
+- Zero Trust is **not a tool**, it is a **security philosophy**  
+- The three pillars: **verify**, **least privilege**, **assume breach**  
+- It protects against internal and external threats  
+- It limits the spread of attacks  
+- Works hand-in-hand with MFA, PAM, JIT, and micro-segmentation  
+- Ideal for cloud, hybrid, and modern enterprise environments  
 
 ---
