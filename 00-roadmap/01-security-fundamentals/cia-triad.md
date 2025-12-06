@@ -76,4 +76,4 @@ For example, a DDoS attack (Availability) may prevent the SOC from detecting phi
 ---
 
 ##  How I would explain it in an interview  
-**“I use the CIA Triad as a mental model for everything I configure. For example, in my AD lab: confidentiality is enforced with proper group-based access control, integrity is maintained by monitoring changes through Event Viewer and PowerShell logging, and availability is ensured with VM snapshots and backup strategies. Thinking in CIA helps me understand not only how attacks work, but how to design defenses that don't break business operations.”**
+**I use the CIA Triad as a mental model for everything I configure. For example, in my AD lab: confidentiality is enforced with proper group-based access control, integrity is maintained by monitoring changes through Event Viewer and PowerShell logging, and availability is ensured with VM snapshots and backup strategies. Thinking in CIA helps me understand not only how attacks work, but how to design defenses that don't break business operations.**
