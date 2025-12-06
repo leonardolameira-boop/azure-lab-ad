@@ -1,7 +1,7 @@
 # Cybersecurity Learning Roadmap
 
 This folder contains my high-level study roadmap — the sequence I’m following to build a solid foundation in cybersecurity and progress toward SOC Analyst / Blue Team roles.  
-It includes learning priorities, milestones, certifications, and the labs I plan to complete.
+It includes learning priorities, milestones, certifications, and the labs.
 
 ---
 
