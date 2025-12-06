@@ -57,7 +57,7 @@ In short:
 ## 4) Accounting – *Tracking what was done*
 
 This is the logging part.  
-The system records the user's actions for auditing, monitoring, and security purposes.
+The system records the user's actions for auditing, monitoring, and security purposes. Accounting is also a deterrent control, because when users know their actions are being logged and monitored, they are less likely to attempt malicious behavior. The visibility itself discourages misuse.
 
 Examples:
 - Windows Event Logs (like 4624 for successful logon)  
