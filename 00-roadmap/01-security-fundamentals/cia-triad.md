@@ -5,7 +5,7 @@ Instead of treating the three pillars as isolated ideas, I mapped them to scenar
 
 ---
 
-## 🔒 Confidentiality  
+##  Confidentiality  
 Ensures that information is accessed only by authorized individuals.
 
 ### How I understand it  
@@ -24,7 +24,7 @@ When I'm working with Active Directory, this directly relates to permissions, gr
 
 ---
 
-## 🧭 Integrity  
+##  Integrity  
 Ensures that data remains accurate, consistent, and unaltered unless changed by someone who is authorized.
 
 ### How I understand it  
@@ -43,7 +43,7 @@ In AD or logs, even a small unauthorized modification can break authentication o
 
 ---
 
-## ⚙️ Availability  
+##  Availability  
 Ensures that systems, services, and data are accessible when needed.
 
 ### How I understand it  
@@ -62,7 +62,7 @@ In SOC terms, it's about identifying anything that interrupts service — whethe
 
 ---
 
-## 🧩 How the three work together  
+##  How the three work together  
 A system is only secure when **all three** pillars are balanced.
 
 Example using my AD lab:
@@ -75,5 +75,5 @@ For example, a DDoS attack (Availability) may prevent the SOC from detecting phi
 
 ---
 
-## 🎙️ How I would explain it in an interview  
+##  How I would explain it in an interview  
 **“I use the CIA Triad as a mental model for everything I configure. For example, in my AD lab: confidentiality is enforced with proper group-based access control, integrity is maintained by monitoring changes through Event Viewer and PowerShell logging, and availability is ensured with VM snapshots and backup strategies. Thinking in CIA helps me understand not only how attacks work, but how to design defenses that don't break business operations.”**
